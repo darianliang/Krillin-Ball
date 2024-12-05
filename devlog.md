@@ -4,5 +4,3 @@ Description: You are Krillin from Dragon Ball. You spawn on a platform that tilt
 To do:
 Figure out how to attach Dragon Balls to platform without having them fall due to gravity
  Attach it to the platform in hierarchy
-
-Test Pull
