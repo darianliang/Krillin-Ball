@@ -4,3 +4,10 @@ Description: You are Krillin from Dragon Ball. You spawn on a platform that tilt
 To do:
 Figure out how to attach Dragon Balls to platform without having them fall due to gravity
  Attach it to the platform in hierarchy
+ Set kinematic
+
+Figure out how to make Krillin not bounce when the platform rotates quickly
+ Change the way we rotate the platform
+ Originally we wanted to use the flight simulator controls to tilt the platform but we realized this was not efficient
+ 
+
