@@ -10,8 +10,6 @@ public class GoalScript : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene();
-
-        Debug.Log(scene.name);
     }
 
     void OnTriggerEnter(Collider collider)
@@ -25,7 +23,8 @@ public class GoalScript : MonoBehaviour
         {
             SceneManager.LoadScene("MediumMaze");
         }
-        else if (scene.name == "MediumMaze") {
+        else if (scene.name == "MediumMaze") 
+        {
             SceneManager.LoadScene("HardMaze");
         }
     }

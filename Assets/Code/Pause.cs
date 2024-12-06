@@ -6,10 +6,34 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public void Setup() {
-        gameObject.SetActive(true);
+    private bool paused;
+
+    public GameObject pauseScreen;
+
+    void Start()
+    {
+        paused = false;
     }
-    public void Takedown() {
-        gameObject.SetActive(false);
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.JoystickButton9))
+        {
+            Debug.Log("pause");
+
+            if (paused)
+            {
+                pauseScreen.SetActive(false);
+                Time.timeScale = 1.0f;
+                
+            }
+            else
+            {
+                pauseScreen.SetActive(true);
+                Time.timeScale = 0.0f;
+            }
+
+            paused = !paused;
+        }
     }
 }
