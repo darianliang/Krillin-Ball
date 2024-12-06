@@ -6,7 +6,7 @@ public class DragonBall : MonoBehaviour
 {
     void FixedUpdate()
     {
-
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnTriggerEnter(Collider other) {
