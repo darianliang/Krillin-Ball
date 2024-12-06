@@ -35,5 +35,10 @@
     - Obtain Dragon Ball sound
     - Win sound
 
+### 12/6/2024 - 
+- Implemented scoring system for all three mazes
+- Implemented collision detection for Dragon Balls
+
+
  
 
