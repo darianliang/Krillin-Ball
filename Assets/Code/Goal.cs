@@ -19,6 +19,11 @@ public class GoalScript : MonoBehaviour
             return;
         }
 
+        if (ScoreKeeper.scoreCount != 7)
+        {
+            return;
+        }
+
         if (scene.name == "EasyMaze")
         {
             SceneManager.LoadScene("MediumMaze");

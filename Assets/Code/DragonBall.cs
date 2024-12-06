@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DragonBall : MonoBehaviour
 {
-    void FixedUpdate()
+    void Update()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        transform.Rotate(new Vector3(30, 60, 90) * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other) {
