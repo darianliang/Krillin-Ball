@@ -15,8 +15,8 @@ public class Platform : MonoBehaviour
 
     void FixedUpdate()
     {
-        float xRotation = Input.GetAxis("Horizontal") * xRotationRange * -1;
-        float zRotation = Input.GetAxis("Vertical") * zRotationRange * -1;
+        float xRotation = Input.GetAxis("Vertical") * xRotationRange;
+        float zRotation = Input.GetAxis("Horizontal") * zRotationRange * -1;
 
         Quaternion rotation = Quaternion.Euler(xRotation, 0.0f, zRotation);
 
