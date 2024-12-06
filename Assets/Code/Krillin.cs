@@ -15,4 +15,10 @@ public class Krillin : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other) {
+        // if (other.gameObject.tag == "Dragon Ball") {
+        //     ScoreKeeper.scoreCount += 1;
+        // }
+    }
 }

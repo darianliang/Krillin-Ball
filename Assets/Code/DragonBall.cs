@@ -9,4 +9,10 @@ public class DragonBall : MonoBehaviour
     {
 
     }
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "Krillin") {
+            Destroy(gameObject);
+            ScoreKeeper.scoreCount += 1;
+        }
+    }
 }

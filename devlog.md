@@ -1,6 +1,6 @@
 # Devlog
 
-### 12/5/2024 - Game description and to-do
+### 12/4/2024 - Game description and to-do
 
 - Game: Krillin Ball
 - Description:   You are Krillin from Dragon Ball. You spawn on a platform that tilts in every direction. 
@@ -13,7 +13,7 @@
     - Attach it to the platform in hierarchy
     - Set kinematic
 
-### 12/6/2024 - Updated game description and to-do
+### 12/5/2024 - Updated game description and to-do
 - Description:    You are Krillin from Dragon Ball. You spawn in a maze that tilts in every direction. 
                 Scattered throughtout the maze are the seven Dragon Balls. You can only move throughtout
                 the maze by tilting the maze and letting yourself roll. Your main objective is to escape
