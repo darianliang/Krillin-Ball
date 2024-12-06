@@ -25,5 +25,15 @@
     - Change the way we rotate the platform
     - Originally we wanted to use the flight simulator controls to tilt the platform but we realized this was 
   not efficient
+- Implement scoring (D)
+- Build two mazes (L)
+- Implement pause screen (D)
+- Implement level changes (L)
+- Implement glow when Krillin obtains Dragon Ball (L)
+- Implement sounds
+    - Rolling sound (in general when Krillin is rolling)
+    - Obtain Dragon Ball sound
+    - Win sound
+
  
 
