@@ -14,9 +14,13 @@ public class Menus : MonoBehaviour
 
     public GameObject GameCompleteMenu;
 
+    public GameObject InstructionsMenu;
+
     public TMP_Text levelCompleteButtonText;
 
     private bool paused;
+
+    private bool instructionsup;
 
     private Scene scene;
 
@@ -46,25 +50,46 @@ public class Menus : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.JoystickButton9) || Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (StartMenu.activeInHierarchy || LevelCompleteMenu.activeInHierarchy)
-            {
+        if (Input.GetKeyDown(KeyCode.JoystickButton9) || Input.GetKeyDown(KeyCode.Escape)) {
+            if (StartMenu.activeInHierarchy || LevelCompleteMenu.activeInHierarchy) {
                 return;
             }
-
-            if (paused)
-            {
+            if (paused) {
                 PauseMenu.SetActive(false);
                 Time.timeScale = 1.0f;
             }
-            else
-            {
-                PauseMenu.SetActive(true);
+            else {
+                if (instructionsup) {
+                    PauseMenu.SetActive(false);
+                }
+                else {
+                    PauseMenu.SetActive(true);
+                }
                 Time.timeScale = 0.0f;
             }
 
             paused = !paused;
+        }
+
+        if (Input.GetKeyDown(KeyCode.I)) {
+            if (StartMenu.activeInHierarchy || LevelCompleteMenu.activeInHierarchy) {
+                return;
+            }
+            if (instructionsup) {
+                InstructionsMenu.SetActive(false);
+                if (paused) {
+                    PauseMenu.SetActive(true);
+                }
+                Time.timeScale = 1.0f;
+            }
+            else {
+                InstructionsMenu.SetActive(true);
+                if (paused) {
+                    PauseMenu.SetActive(false);
+                }
+                Time.timeScale = 0.0f;
+            }
+            instructionsup = !instructionsup;
         }
 
         if (StartMenu.activeInHierarchy)

@@ -39,7 +39,9 @@
 - Implemented scoring system for all three mazes
 - Implemented collision detection for Dragon Balls
 
-### 12/7/2924
+### 12/7/2024
 - Added menus that display in between completion of a level and loading of the next.
     - These menus give the player the option of either starting from the first level or progressing to the next level.
 - Restructured functionality for displaying pause, start, and transition menus.
+- Added instructions menu
+    - Added functionality to where pause and instructions do not overlap with each other when they are both active
