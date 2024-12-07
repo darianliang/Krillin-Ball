@@ -14,8 +14,6 @@ public class Menus : MonoBehaviour
 
     public GameObject GameCompleteMenu;
 
-    public GameObject InstructionsMenu;
-
     public TMP_Text levelCompleteButtonText;
 
     private bool paused;
