@@ -44,6 +44,11 @@ public class Menus : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.JoystickButton9) || Input.GetKeyDown(KeyCode.Escape))
         {
+            if (StartMenu.activeInHierarchy || LevelCompleteMenu.activeInHierarchy)
+            {
+                return;
+            }
+
             if (paused)
             {
                 PauseMenu.SetActive(false);
@@ -56,6 +61,19 @@ public class Menus : MonoBehaviour
             }
 
             paused = !paused;
+        }
+
+        if (Input.GetKeyDown(KeyCode.JoystickButton1))
+        {
+            if (StartMenu.activeInHierarchy)
+            {
+                OnStart();
+            }
+            else if (LevelCompleteMenu.activeInHierarchy)
+            {
+                Debug.Log("what");
+                LoadNextLevel();
+            }
         }
     }
 
