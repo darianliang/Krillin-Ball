@@ -20,8 +20,6 @@ public class Menus : MonoBehaviour
 
     private bool paused;
 
-    private bool instructionsup;
-
     private Scene scene;
 
     void Start()
@@ -59,37 +57,11 @@ public class Menus : MonoBehaviour
                 Time.timeScale = 1.0f;
             }
             else {
-                if (instructionsup) {
-                    PauseMenu.SetActive(false);
-                }
-                else {
-                    PauseMenu.SetActive(true);
-                }
+                PauseMenu.SetActive(true);
                 Time.timeScale = 0.0f;
             }
 
             paused = !paused;
-        }
-
-        if (Input.GetKeyDown(KeyCode.I)) {
-            if (StartMenu.activeInHierarchy || LevelCompleteMenu.activeInHierarchy) {
-                return;
-            }
-            if (instructionsup) {
-                InstructionsMenu.SetActive(false);
-                if (paused) {
-                    PauseMenu.SetActive(true);
-                }
-                Time.timeScale = 1.0f;
-            }
-            else {
-                InstructionsMenu.SetActive(true);
-                if (paused) {
-                    PauseMenu.SetActive(false);
-                }
-                Time.timeScale = 0.0f;
-            }
-            instructionsup = !instructionsup;
         }
 
         if (StartMenu.activeInHierarchy)

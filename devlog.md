@@ -45,3 +45,5 @@
 - Restructured functionality for displaying pause, start, and transition menus.
 - Added instructions menu
     - Added functionality to where pause and instructions do not overlap with each other when they are both active
+- Removed instructions menu
+    - Added instructions to pause menu to simplify user experience
