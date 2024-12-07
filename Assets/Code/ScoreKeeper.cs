@@ -11,11 +11,11 @@ public class ScoreKeeper : MonoBehaviour
 
     void Start()
     {
-        
+        scoreCount = 0;
     }
 
     void Update()
     {
-        scoreText.text = "Dragon Balls: " + Mathf.Round(scoreCount);
+        scoreText.text = "Dragon Balls: " + scoreCount;
     }
 }

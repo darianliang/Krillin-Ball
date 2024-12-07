@@ -38,3 +38,7 @@
 ### 12/6/2024 - 
 - Implemented scoring system for all three mazes
 - Implemented collision detection for Dragon Balls
+
+### 12/7/2924
+- Added menus that display in between completion of a level and loading of the next
+- Restructured functionality for displaying pause, start, and transition menus.
