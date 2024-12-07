@@ -12,6 +12,8 @@ public class Menus : MonoBehaviour
 
     public GameObject LevelCompleteMenu;
 
+    public GameObject GameCompleteMenu;
+
     public TMP_Text levelCompleteButtonText;
 
     private bool paused;
@@ -38,6 +40,8 @@ public class Menus : MonoBehaviour
         PauseMenu.SetActive(false);
 
         LevelCompleteMenu.SetActive(false);
+
+        GameCompleteMenu.SetActive(false);
     }
 
     void Update()
@@ -63,16 +67,29 @@ public class Menus : MonoBehaviour
             paused = !paused;
         }
 
-        if (Input.GetKeyDown(KeyCode.JoystickButton1))
+        if (StartMenu.activeInHierarchy)
         {
-            if (StartMenu.activeInHierarchy)
+            if (Input.GetKeyDown(KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.JoystickButton5))
             {
                 OnStart();
             }
-            else if (LevelCompleteMenu.activeInHierarchy)
+        }
+        else if (LevelCompleteMenu.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.JoystickButton4))
             {
-                Debug.Log("what");
+                StartOver();
+            }
+            else if (Input.GetKeyDown(KeyCode.JoystickButton5))
+            {
                 LoadNextLevel();
+            }
+        }
+        else if (GameCompleteMenu.activeInHierarchy)
+        {
+            if (Input.GetKeyDown(KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.JoystickButton5))
+            {
+                StartOver();
             }
         }
     }
@@ -86,15 +103,13 @@ public class Menus : MonoBehaviour
 
     public void DisplayLevelComplete()
     {
-        LevelCompleteMenu.SetActive(true);
-
         if ((scene.name == "EasyMaze") || (scene.name == "MediumMaze"))
         {
-            levelCompleteButtonText.text = "Next Level";
+            LevelCompleteMenu.SetActive(true);
         }
         else if (scene.name == "HardMaze")
         {
-            levelCompleteButtonText.text = "Try Again";
+            GameCompleteMenu.SetActive(true);
         }
 
         Time.timeScale = 0.0f;
@@ -114,5 +129,10 @@ public class Menus : MonoBehaviour
         {
             SceneManager.LoadScene("EasyMaze");
         }
+    }
+
+    public void StartOver()
+    {
+        SceneManager.LoadScene("EasyMaze");
     }
 }
