@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Pause : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     private bool paused;
 
-    public GameObject pauseScreen;
-
     void Start()
     {
+        gameObject.SetActive(false);
+
         paused = false;
     }
 
@@ -23,13 +23,13 @@ public class Pause : MonoBehaviour
 
             if (paused)
             {
-                pauseScreen.SetActive(false);
+                gameObject.SetActive(false);
                 Time.timeScale = 1.0f;
                 
             }
             else
             {
-                pauseScreen.SetActive(true);
+                gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
             }
 
