@@ -9,11 +9,6 @@ public class Platform : MonoBehaviour
 
     public float zRotationRange = 30f;
 
-    void Start()
-    {
-
-    }
-
     void FixedUpdate()
     {
         float xRotation = Input.GetAxis("Vertical") * xRotationRange;

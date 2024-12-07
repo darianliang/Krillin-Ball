@@ -1,16 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GoalScript : MonoBehaviour
 {
-    private Scene scene;
-
-    void Start()
-    {
-        scene = SceneManager.GetActiveScene();
-    }
+    public UnityEvent OnGoal;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -24,13 +19,6 @@ public class GoalScript : MonoBehaviour
             return;
         }
 
-        if (scene.name == "EasyMaze")
-        {
-            SceneManager.LoadScene("MediumMaze");
-        }
-        else if (scene.name == "MediumMaze") 
-        {
-            SceneManager.LoadScene("HardMaze");
-        }
+        OnGoal.Invoke();
     }
 }
