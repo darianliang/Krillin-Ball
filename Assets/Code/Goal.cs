@@ -6,6 +6,11 @@ using UnityEngine.Events;
 public class GoalScript : MonoBehaviour
 {
     public UnityEvent OnGoal;
+    private AudioSource sound;
+
+    void Start() {
+        sound = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider collider)
     {
@@ -18,7 +23,7 @@ public class GoalScript : MonoBehaviour
         {
             return;
         }
-
+        sound.Play();
         OnGoal.Invoke();
     }
 }
