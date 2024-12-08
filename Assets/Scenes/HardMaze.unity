@@ -702,7 +702,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Paused
+  m_text: 'Paused
+
+
+
+    Tilt the platform using either your joystick or wasd keys
+
+
+    Collect
+    all seven Dragon Balls before advancing to the goal to reach the next level before
+    time runs out
+
+
+    esc (keyboard) or option (controller) to resume
+
+
+    Set
+    display to Full HD for best results'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1599,7 +1615,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1bf0e409dee7e4b77aca387d5230945f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 83db802cd9a98431187a2c208cccda86, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -1988,7 +2004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.6116, y: 12.3081}
+  m_AnchoredPosition: {x: -20.8, y: 13.7}
   m_SizeDelta: {x: 30.6794, y: 9.2008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177016125
